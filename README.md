@@ -57,6 +57,20 @@ Each script can be run on its own once the previous one has produced its output.
 
 ---
 
+## Try it on example data (no real data needed)
+
+The [`example/`](example/) folder ships **synthetic** summary stats with a known
+positive causal effect and a shared colocalization signal. Point `config.R` at them
+(see [`example/README.md`](example/README.md)) and run the three steps.
+
+![Two-sample MR scatter from the bundled example data — IVW slope ≈ 0.34](example/mr_scatter_example.png)
+
+Running `R/02_mr.R` on the example data recovers **IVW ≈ 0.34** (true θ = 0.35); coloc
+returns a high **PP.H4** at the chr1 locus. *(The plot above is rendered from the
+example files; it's simulated to demonstrate a positive result, not a real finding.)*
+
+---
+
 ## Input data format
 
 You need **GWAS summary statistics** for both the exposure and the outcome. A minimal
